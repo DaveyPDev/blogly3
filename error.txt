@@ -2,3 +2,7 @@ went over on time
 had to start piecing solution code for parts
 
 couldn't get tags to show in new/edit posts
+
+isn't pretty by any means
+
+some pages didn't get to fixing buttons to bootstrap / accesible
