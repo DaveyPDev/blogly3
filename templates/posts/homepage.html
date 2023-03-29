@@ -1,0 +1,30 @@
+z{% extends 'base.html' %}
+
+{% block title %}Users{% endblock %}
+
+{% block content %}
+
+<h1>Recent Postings</h1>
+
+<ul>
+  {% for post in posts %}
+  <li>
+    <a href="/posts/{{ post.id }}">{{ post.title }}</a>
+  </li>
+  <p>{{ post.content }} </p>
+  <p>
+    <small>By {{ post.user.full_name }} on {{ post.friendly_date }} </small>
+  </p>
+  {% endfor %}
+  {% if post.tags %}
+  Tags
+  {% for tag in tags%}
+  <a href="/tags/{{ tag.id }}"></a>
+  {% endfor %}
+  {% endif %}
+</ul>
+
+<!-- Blank names add dots but left blank and cannot delete -->
+
+
+{% endblock %}

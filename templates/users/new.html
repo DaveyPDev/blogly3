@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %} Create User {% endblock %}
+
+{% block content %}
+
+<!-- <h1>new.html Page Test</h1> -->
+
+<h1> Sign up new user </h1>
+<form method="POST">
+    <p>First Name: <input type="text" name="first_name" id="first_name"></p>
+    <p>Last Name: <input type="text" name="last_name" id="last_name"></p>
+    <p>Image URL: <input type="text" name="image_url" id="image_url"></p>
+
+    <button class="btn btn-success" onclick="window.location.href='/users/new'">Add User</button>
+</form>
+
+{% endblock %}

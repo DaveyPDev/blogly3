@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1> Tag List </h1>
+
+<ul>
+    {% for tag in tags %}
+    <li>
+      <a href="/tags/{{ tag.id }}">{{ tag.name }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  
+  <!-- Blank names add dots but left blank and cannot delete -->
+  
+  <form action="/tags/new" method="get">
+    <button class="btn btn-outline-primary" onclick="window.location.href='/tags/new'">Create Tag</button>
+  </form>
+
+{% endblock %}

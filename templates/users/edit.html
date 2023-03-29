@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %} Edit {{ user.full_name }} {%  endblock %}
+
+{% block content %}
+
+<h1>Edit.html Page Test</h1>
+<form method="POST">
+    <p>First Name: <input type="text" name="first_name" id="first_name"></p>
+    <p>Last Name: <input type="text" name="last_name" id="last_name"></p>
+    <p>Image URL: <input type="text" name="image_url" id="image_url" value="{{ user.image_url }}"></p>
+    <!-- Is there a way in edit if left blank to revert back to default image -->
+
+    <button>Submit Edit</button>
+    <button>Cancel Edit</button>
+
+    
+</form>
+
+{% endblock %}
